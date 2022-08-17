@@ -10,6 +10,7 @@ use App\Models\Flight;  //Flight for About
 use App\Models\Management;
 use App\Models\Mission;
 use App\Models\WorkProcess;
+use App\Models\Slider;
 
 class AboutController extends Controller
 {
@@ -22,14 +23,15 @@ class AboutController extends Controller
         $contact = Contact::all();
         $certifications = Certification::all();
         $managements = Management::all();
-        return view('component.index', compact('about','mission','process','contact','certifications','managements'));
+        $sliders = Slider::all();
+        return view('component.index', compact('about','mission','process','contact','certifications','managements','sliders'));
     }
 
     public function about(){
         $abouts = Flight::all();
-        // $about = Flight::first();
+        $sliders = Slider::all();
         $certifications = Certification::all();
-        return view('page.aboutPage',compact('abouts','certifications'));
+        return view('page.aboutPage',compact('abouts','certifications','sliders'));
     }
 
     public function mission(){
