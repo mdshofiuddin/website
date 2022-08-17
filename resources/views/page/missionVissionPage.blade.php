@@ -14,7 +14,7 @@
 
     <div class="container">
         <div class="left-heading">
-            <h2 class="section-title">Mission & Vision</h2>
+            <h2 class="section-title">{{optional($mission)->title}}</h2>
         </div>
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">

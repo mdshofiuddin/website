@@ -33,6 +33,7 @@ class MissionController extends Controller
     ]);
 
     $user->description      = $request->input('description');
+    $user->title      = $request->input('title');
 
         if($request->hasFile('picture')){
             $allowedExtension = ['pdf','jpg','png'];
@@ -65,6 +66,7 @@ class MissionController extends Controller
     {
         $user = Mission::find($id);
         $user->description      = $request->input('description');
+        $user->title      = $request->input('title');
 
         if($request->hasFile('picture')){
             $destination = public_path('images/').$user->picture;

@@ -37,27 +37,32 @@ class AboutController extends Controller
     public function mission(){
         $missions = Mission::all();
         // $missions = Mission::latest()->first();
-        return view('page.missionVissionPage', compact('missions'));
+        $sliders = Slider::all();
+        return view('page.missionVissionPage', compact('missions','sliders'));
     }
 
     public function working(){
         $process = WorkProcess::all();
-        return view('page.workingProcessPage',compact('process'));
+        $sliders = Slider::all();
+        return view('page.workingProcessPage',compact('process','sliders'));
     }
 
     public function certification(){
         $certifications = Certification::all();
-        return view('component.certification',compact('certifications'));
+        $sliders = Slider::all();
+        return view('component.certification',compact('certifications','sliders'));
     }
 
     public function management(){
         $managements = Management::all();
-        return view('page.managementPage',compact('managements'));
+        $sliders = Slider::all();
+        return view('page.managementPage',compact('managements','sliders'));
     }
 
     public function contact(){
         $contact = Contact::all();
-        return view('page.contactPage',compact('contact'));
+        $sliders = Slider::all();
+        return view('page.contactPage',compact('contact','sliders'));
     }
 
     public function master(){

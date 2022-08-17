@@ -31,11 +31,13 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="form-group">
+                            <label for="exampleInputEmail1" class="text">Title</label>
+                                <input type="text" name="title" class="form-control">
+
+                        </div>
                             <label for="exampleInputEmail1" class="text">Description</label>
-                           
                                 <textarea name="description" id="summernote" rows="6" class="form-control">
                                 </textarea>
-
                         </div>
                         <label for="Picture" class="text">Picture</label>
                         <div class="form-group">

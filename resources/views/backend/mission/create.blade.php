@@ -37,6 +37,9 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="form-group">
+                                <label for="exampleInputEmail1" class="text">Title</label>
+                                    <input type="text" name="title"  class="form-control">
+
                                 <label for="exampleInputEmail1" class="text">Description</label>
                                     <textarea name="description" id="summernote" rows="60" class="form-control">
                                     </textarea>

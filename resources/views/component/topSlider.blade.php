@@ -12,7 +12,6 @@
             @endforeach
             {{-- <li>
                 <img src="{{asset('assets/images/_PDB4092.JPG')}}" style="height: 100vh; opacity:1;" />
-
             </li>
             <li>
                 <img src="{{asset('assets/images/_PDB4500.JPG')}}" style="height: 100vh; opacity:1;" />

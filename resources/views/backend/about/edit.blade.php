@@ -40,6 +40,9 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="form-group">
+                                <label for="exampleInputEmail1" class="text">Title</label>
+                                    <input type="text"  name="title" class="form-control">{{$user->title}}
+                                </div>
                                 <label for="exampleInputEmail1" class="text">Description</label>
                                     <textarea id="summernote" rows="60" name="description" class="form-control">{{$user->description}}
                                     </textarea>

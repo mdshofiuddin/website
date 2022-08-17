@@ -15,6 +15,7 @@ class CreateFlightsTable extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
+            $table->text('title')->nullable();
             $table->text('description')->nullable();
             $table->string('picture')->nullable();
             $table->timestamps();
