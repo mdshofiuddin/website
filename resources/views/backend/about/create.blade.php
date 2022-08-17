@@ -1,0 +1,60 @@
+@extends('backend.master')
+
+@section('title','Create About')
+@section('content')
+
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-dark" style="  margin-top: 40px;">
+          <div class="card-header">
+            <h3 class="card-title"><i class="fas fa-plus-circle"></i> Create About Description</h3>
+            <a href="{{route('show-about')}}" title="list of about" class="btn btn-outline-secondary float-right"><i class="fas fa-list"></i> About List</a>
+          </div>
+          @if ($errors->any())
+          <div class="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+                @endforeach
+            </ul>
+          </div>
+          @endif
+
+          {{-- @if(Session::has('msg'))
+          <p class="alert alert-success verify-alert"> <i class="fas fa-solid fa-circle-check"></i> {{Session::get('msg')}}</p>
+          @endif --}}
+          <form id="quickForm" action="{{url('store-about')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="text">Description</label>
+                           
+                                <textarea name="description" id="summernote" rows="6" class="form-control">
+                                </textarea>
+
+                        </div>
+                        <label for="Picture" class="text">Picture</label>
+                        <div class="form-group">
+                            <input type="file" name="picture" class="form-control">
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+            <div class="card-footer text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+@endsection
+

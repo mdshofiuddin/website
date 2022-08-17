@@ -1,0 +1,102 @@
+
+/*  Author      : Md. Shofiuddin
+    Title       : Custom CSS
+    Description : Admin Panel color matching and responsing
+    Date        : 06/07/2022
+*/
+
+.bg-custom{
+    background-color: #1c2542 !important;
+    color: #fff !important;
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active{
+    /* background-color: #1c2542; */
+    background-color: #20344a !important;
+    color: #fff;
+}
+
+
+ /* Card Primary */
+        .card-dark:not(.card-outline) > .card-header {
+            background-color: #20344a;
+            }
+
+/* Active */
+        [class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link.active, [class*="sidebar-dark-"] .nav-treeview > .nav-item >
+         .nav-link.active:focus, [class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link.active:hover {
+        background-color: rgba(203, 220, 236, 0.9);
+        color: #343a40;
+        }
+
+/* btn dark to blue */
+        .btn-dark {
+            color: #fff;
+            background-color: #20344a;
+            border-color: #151c34;
+            box-shadow: none;
+            }
+
+/* Sidebar Dark to deep-blue */
+        [class*="sidebar-dark-"] {
+        background-color: #20344a;
+            }
+
+/* Label color black to blue */
+        .text{
+            color: #20344a;
+        }
+
+/* Search field color change gray to blue */
+        [class*="sidebar-dark"] .btn-sidebar, [class*="sidebar-dark"] .form-control-sidebar {
+            background-color: #1c2542;
+            border: 1px solid #56606a;
+            color: #fff;
+        }
+
+/* btn secondary gray to deep blue */
+        .btn-secondary {
+        color: #fff;
+        background-color: #20344a;
+        /* background-color: #1c2542; */
+        border-color: #6c757d;
+        box-shadow: none;
+        }
+
+/* Dropdown background */
+        .dropdown-item.active, .dropdown-item:active {
+            color: #fff;
+            text-decoration: none;
+            background-color: #20344a;
+        }
+
+/* Dropdown padding */
+        div.dt-button-collection {
+            padding:  0px !important;
+
+          }
+
+/* Pagination Background Color */
+        .page-item.active .page-link {
+            z-index: 3;
+            color: #fff;
+            background-color: #20344a;
+            border-color: #20344a;
+        }
+        /* Ancortag color */
+        a {
+            color: #20344a;
+          }
+        a:hover {
+            color: #4a536e;
+          }
+/* Secondary hover color */
+        .btn-outline-secondary:hover {
+            color: #fff;
+            background-color: #01203c;
+            border-color: #6c757d;
+        }
+/* Summar note for textarea height */
+
+.note-editor.note-airframe .note-editing-area .note-editable, .note-editor.note-frame .note-editing-area .note-editable {
+    height: 250px;
+}
