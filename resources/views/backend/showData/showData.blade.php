@@ -22,6 +22,7 @@
           <th>Email</th>
           <th>Phone</th>
           <th>Role(s)</th>
+          <th>Image</th>
           {{-- <th>Image</th> --}}
           <th>Action</th>
         </tr>
@@ -34,6 +35,7 @@
           <td>{{$user->email}}</td>
           <td>{{$user->phone}}</td>
           <td>{{$user->role}}</td>
+          <td><img src="/images/{{($user)->image}}" alt="NO Img" width="150px" height="auto"></td>
           {{-- <td> <img src="/images/{{$user->image}}" alt="NO Img" width="70px" height="70px"> </td> --}}
 
             <td>

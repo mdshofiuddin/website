@@ -3,7 +3,7 @@
 @extends('layouts.master')
 @section('title','Home')
 @section('content')
-{{-- @include('component.topSlider') --}}
+@include('component.topSlider')
 @include('component.about')
 @include('component.missionVission')
 @include('component.workingProcess')

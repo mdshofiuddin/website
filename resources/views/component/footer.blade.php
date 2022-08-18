@@ -1,25 +1,7 @@
-{{-- @extends('layouts.master')
-@section('title','Contact')
-
-
-@section('content')
-<div class="container" style="height: 700px;">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Contact Page Content</h1>
-        </div>
-    </div>
-</div>
-@endsection --}}
-
-
-
-
 
 <div class="footer-clean" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s" id="contact-us">
     <footer>
         <div class="center-heading">
-            <!-- <h1 class="section-title f-color" style="padding-bottom:70px;padding-top: 20px;">Contact Us</h1> -->
         </div>
         <div class="container" style="color: #fff !important;">
             <div class="row justify-content-center">
@@ -55,15 +37,14 @@
                 <div class="col-sm-4 col-md-3 item">
                     <h3>Others Link</h3>
                     <ul>
+                        <li><a class="f-color" href="https://www.fakirgroup.com">Fakir Group</a></li>
                         <li><a class="f-color" href="https://www.fakirknit.com">Fakir Knitwears</a></li>
                         <li><a class="f-color" href="https://www.fakirechoknit.com">Echo Knitwears</a></li>
                         <li><a class="f-color" href="https://www.fklspinning.com">Fakir Spinning</a></li>
                         <li><a class="f-color" href="https://www.fakirlogistics.com">Fakir Logistics</a></li>
-                        <li><a class="f-color" href="https://www.zamanagro.com">Fakir zamanagro</a></li>
+                        <li><a class="f-color" href="https://www.zamanagro.com">Zaman Agro</a></li>
                     </ul>
                 </div>
-
-
 
                 <ul class="social" style="margin-top: 50px;">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>

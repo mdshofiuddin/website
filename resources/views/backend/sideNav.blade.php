@@ -317,6 +317,15 @@ $route = Route::current()->getName();
             </a>
         </li>
 
+        {{-- <li class="nav-item">
+            <a href="{{route('changePassword')}}" class="nav-link {{($route=='showData')?'active':''}}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Change Password
+                </p>
+            </a>
+        </li> --}}
+
       </ul>
     </li>
 

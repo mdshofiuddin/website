@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 // use Illuminate\Support\Facades\Redirect;
 
@@ -37,15 +38,11 @@ class userController extends Controller
             'role'     =>  'required',
         ]);
         $user = new User();
-
-
-
         $user->name      = $request->input('name');
         $user->email     = $request->input('email');
         $user->phone     = $request->input('phone');
         $user->role      = $request->input('role');
         $user->password  = Hash::make($request->input('password'));
-
 
         if($request->hasFile('image')){
             $allowedExtension = ['pdf','jpg','png'];
@@ -64,9 +61,7 @@ class userController extends Controller
         $request->session()->flash('msg', 'Data Successfully Created');
         return redirect()->back();
 
-
     }
-
 
     public function show($id)
     {
@@ -75,9 +70,15 @@ class userController extends Controller
         return view('backend.editData.edit',compact('user'));
     }
 
+    // public function changePassword()
+    // {
+    //     $id = Auth::user()->id;
+    //     $user = User::find($id);
+    //     return view('backend.editData.changePassword',compact('user'));
+    // }
+
     public function update(Request $request, $id)
     {
-
         $request->validate([
             'name'  => 'required',
             'email' => 'required',
@@ -91,7 +92,6 @@ class userController extends Controller
         $user->phone     = $request->input('phone');
         $user->role      = $request->input('role');
         $user->password  = Hash::make($request->input('password'));
-
 
         if($request->hasFile('image')){
             $destination = public_path('images/').$user->image;
@@ -110,24 +110,38 @@ class userController extends Controller
             // }
         }
 
-
         $user->save();
-
         $request->session()->flash('msg', 'Data Successfully Updated');
         return redirect()->back();
 
     }
 
 
-    public function destroy($id)
-    {
-        $user = User::find($id);
-        $user->delete();
-        session()->flash('msg', 'Data Deleted Successfully');
-        return redirect('/showData');
+    // public function updatePassword(Request $request, $id)
+    // {
+        //     $request->validate([
+            //         'password'  => 'required|confirmed|min:6',
+            //     ]);
 
-    }
+            //     if (Auth::attempt(['id'=>Auth::user()->id, 'password'=>$request->old_password])){
+                //         $user = User::find(Auth::user()->id);
+                //         $user->password = bcrypt($request->password);
+
+                //     $user = User::find($id);
+                //     $user->password  = Hash::make($request->input('password'));
+                //     $user->save();
+                //     $request->session()->flash('msg', 'Data Successfully Updated');
+                //     return redirect()->back();
+                // }
 
 
+                public function destroy($id)
+                {
+                    $user = User::find($id);
+                    $user->delete();
+                    session()->flash('msg', 'Data Deleted Successfully');
+                    return redirect('/showData');
+
+                }
 
 }

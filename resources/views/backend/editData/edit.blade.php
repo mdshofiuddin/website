@@ -77,11 +77,11 @@
                     <div class="row">
                         <div class="col-md-6">
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                                 <label for="exampleInputEmail1" class="text">Password</label>
                                 <input type="password" value="{{$user->password}}" name="password" class="form-control" id="password" placeholder="Password">
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="col-md-12">
                             <div class="form-group">

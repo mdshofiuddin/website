@@ -56,14 +56,15 @@
                         <!-- ***** Menu Start ***** -->
 
                         <ul class="nav navbar-text ul-nav">
-                            <li><a href="{{url('/')}}" class="active">Home</a></li>
-                            <li><a href="{{url('/about')}}">About</a></li>
-                            <li><a href="{{url('/mission')}}">Mission & Vision</a></li>
-                            <li><a href="{{url('/working')}}">Work Process</a></li>
-                            <li><a href="{{url('/management')}}">Management</a></li>
+                            {{-- <li><a href="{{url('/')}}" class="active">Home</a></li> --}}
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/')}}">Home</a></li>
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/about')}}">About</a></li>
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/mission')}}">Mission & Vision</a></li>
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/working')}}">Work Process</a></li>
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/management')}}">Management</a></li>
                             <!-- <li><a href="#testimonials">Testimonials</a></li> -->
                             {{-- <li><a href="#blog">Latest News</a></li> --}}
-                            <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                            <li><a style="font-size: 14px;font-weight:400;" href="{{url('/contact')}}">Contact Us</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -76,7 +77,7 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-@include('component.topSlider')
+{{-- @include('component.topSlider') --}}
 
 
 @yield('content')

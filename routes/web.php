@@ -22,6 +22,8 @@ Route::controller(userController::class)->group(function(){
     Route::get('/create','create')->name('create')->middleware(Admin::class);
     Route::post('/store','store')->name('store')->middleware(Admin::class);
     Route::get('/editData/{id}','show')->name('editData')->middleware(Admin::class);
+    // Route::get('/changePassword','changePassword')->name('changePassword')->middleware(Admin::class);
+    // Route::post('/updatePassword/{id}','updatePassword')->name('updatePassword')->middleware(Admin::class);
     Route::post('/updateData/{id}','update')->name('updateData')->middleware(Admin::class);
     Route::get('deleteData/{id}','destroy')->name('deleteData')->middleware(Admin::class);
 });
